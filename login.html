@@ -1,0 +1,142 @@
+<html>
+<head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<title>Login</title>
+<style>
+.box{
+      background-color: #157fa4 ;
+	  padding:15px;
+	  position:absolute;
+	  top:100px;
+	  left:500px;
+}
+.box1{
+      background-color: #157fa4 ;
+	  padding:15px;
+	  position:absolute;
+	  top:100px;
+	  left:500px;
+	  display:none;
+}
+.input{
+    height:35px;
+	width:240px;
+	font-size:15px;
+	padding:10px;
+	border:none;
+}
+th{
+    font-size:30px;
+	color: #1b4350 ;
+}
+td{
+  color:white;
+}
+.btn{
+    height:38px;
+	width:240px;
+	background-color: #1b4350 ;
+	border:none;
+	font-size:20px;
+	color:white;
+}
+#login{
+    color:blue;
+	text-decoration:underline;
+}
+#signup{
+    color:blue;
+	text-decoration:underline;
+}
+#signup:hover{
+     cursor:pointer;
+}
+#login:hover{
+     cursor:pointer;
+}
+
+</style>
+<script src='jquery.js'>
+</script>
+<script>
+function myFunction() {
+    var x = document.getElementById("psw");
+    if (x.type === "password") {
+        x.type = "text";
+    } else {
+        x.type = "password";
+    }
+}
+</script>
+<script>
+$(document).ready(function(){
+   $("#signup").click(function(){
+   $(".box").fadeOut(1000);
+   $(".box1").fadeIn(1000);
+   });
+   $("#login").click(function(){
+   $(".box1").fadeOut(1000);
+   $(".box").fadeIn(1000);
+   });
+});
+</script>
+</head>
+<body>
+<div class='box'>
+<table cellpadding='10px'>
+<form>
+<tr>
+<th>Login Information</th>
+</tr>
+<tr>
+<td><input type='text' placeholder="&#xf007; Username" style="font-family:Arial, FontAwesome" class='input'></td>
+</tr>
+<tr>
+<td><input type='password' placeholder='&#xf084; Password' style="font-family:Arial, FontAwesome" class='input' id='psw'></td>
+</tr>
+<tr>
+<td>Show Password<input type='checkbox' class='chk' onclick='myFunction()'></td>
+</tr>
+<tr>
+<th><input type='submit' value='Login' class='btn'></th>
+</tr>
+<tr>
+<td>Not Registerd? SignUp <a id='signup'>Here</a></td>
+</tr>
+</form>
+</table>
+</div>
+
+
+<div class='box1'>
+<table cellpadding='10px'>
+<form>
+<tr>
+<th>Registeration</th>
+</tr>
+<tr>
+<td><input type='text' placeholder='&#xf007; Username' class='input' style="font-family:Arial, FontAwesome"></td>
+</tr>
+<tr>
+<td><input type='email' placeholder='&#xf0e0; Email' class='input' style="font-family:Arial, FontAwesome"></td>
+</tr>
+<tr>
+<td><input type='password' placeholder='&#xf084; Password' class='input' id='psw' style="font-family:Arial, FontAwesome"></td>
+</tr>
+<tr>
+<td><input type='password' placeholder='&#xf084; Confirm Password' class='input' id='psw' style="font-family:Arial, FontAwesome"></td>
+</tr>
+<tr>
+<td>Show Password<input type='checkbox' class='chk' onclick='myFunction()'></td>
+</tr>
+<tr>
+<th><input type='submit' value='Register' class='btn'></th>
+</tr>
+<tr>
+<td>Already Registerd? Login <a id='login'>Here</a></td>
+</tr>
+</form>
+</table>
+</div>
+</body>
+</html>
